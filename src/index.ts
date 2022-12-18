@@ -2,9 +2,12 @@
 import express from "express";
 import morgan from "morgan";
 import cors from "cors";
-import { TaskRouter } from "./shared/routes/task.route";
+
 import { ConfigServer } from "./config/config";
 import { DataSource } from "typeorm";
+import { TaskRouter } from "./task/task.router";
+import { StatusRouter } from "./status/status.router";
+import { PriorityRouter } from "./priority/priority.router";
 
 
 class StartServer extends ConfigServer {
@@ -23,7 +26,11 @@ class StartServer extends ConfigServer {
     }
 
     routers(): Array<express.Router> {
-        return [new TaskRouter().router];
+        return [
+          new TaskRouter().router,
+          new StatusRouter().router,
+          new PriorityRouter().router
+        ];
 
     }
 

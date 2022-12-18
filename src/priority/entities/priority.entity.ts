@@ -1,7 +1,8 @@
 
 import { Column, Entity, JoinColumn, OneToMany, OneToOne, PrimaryGeneratedColumn } from "typeorm";
 import { BaseEntity } from "../../config/base.entity";
-import { TaskEntity } from "./task.entity";
+import { TaskEntity } from "../../task/entities/task.entity";
+
 
 @Entity({ name: "priority" })
 export class PriorityEntity extends BaseEntity {

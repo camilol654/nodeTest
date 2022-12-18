@@ -1,8 +1,8 @@
 
 import { Column, Entity, JoinColumn, ManyToOne } from "typeorm";
 import { BaseEntity } from "../../config/base.entity";
-import { PriorityEntity } from "./priority.entity";
-import { StatusEntity } from "./status.entity";
+import { PriorityEntity } from "../../priority/entities/priority.entity";
+import { StatusEntity } from "../../status/entities/status.entity";
 
 @Entity({ name: "task" })
 export class TaskEntity extends BaseEntity {
