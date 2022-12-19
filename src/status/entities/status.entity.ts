@@ -14,7 +14,7 @@ export class StatusEntity extends BaseEntity {
     desc!: string;
 
     @OneToMany(() => TaskEntity, task => task.statusTask)
-    statusTask!: TaskEntity[];
+    statusTask?: TaskEntity[];
 
 
 }

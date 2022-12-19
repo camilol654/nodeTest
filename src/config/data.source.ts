@@ -17,11 +17,11 @@ const Config: DataSourceOptions = {
     password: process.env.DB_MYSQL_PASSWORD,
     database: process.env.DB_MYSQL_DATABASE,
     entities: [__dirname + "/../**/*.entity{.ts,.js}"],
-    migrations: [__dirname + "/../../migrations/*{.ts,.js}"],
-    synchronize: true,
+    migrations: [__dirname + "/../migrations/*{.ts,.js}"],
+    synchronize: false,
+    migrationsRun: true,
     logging: false,
-    namingStrategy: new SnakeNamingStrategy()
-
+    namingStrategy: new SnakeNamingStrategy(),
 }
 
 

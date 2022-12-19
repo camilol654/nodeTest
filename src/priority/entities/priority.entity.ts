@@ -14,7 +14,7 @@ export class PriorityEntity extends BaseEntity {
     desc!: string;
 
     @OneToMany(() => TaskEntity, task => task.priorityTask)
-    priorityTask!: TaskEntity[];
+    priorityTask?: TaskEntity[];
 
 
 

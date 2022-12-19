@@ -1,10 +1,11 @@
 import { BaseRoutres } from "../shared/routes/router";
 import { StatusController } from "./controller/status.controller";
+import { StatusMiddleware } from "./middlewares/task.middleware";
 
 
-export class StatusRouter extends BaseRoutres<StatusController> {
+export class StatusRouter extends BaseRoutres<StatusController,StatusMiddleware> {
     constructor() {
-        super(StatusController);
+        super(StatusController,StatusMiddleware);
     }
 
     routes(): void {
@@ -12,7 +13,7 @@ export class StatusRouter extends BaseRoutres<StatusController> {
         this.router.get("/Status/:id", (req, res) =>
             this.controller.getStatusById(req, res)
         );
-        this.router.post("/createStatus", (req, res) =>
+        this.router.post("/createStatus", (req, res, next) => [this.middelware.statusValidator(req, res, next)],(req, res) =>
             this.controller.createStatus(req, res)
         );
         this.router.put("/updateStatus/:id", (req, res) =>

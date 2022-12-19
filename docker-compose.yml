@@ -2,6 +2,7 @@ version: "3.1"
 
 services:
   terrafactora_db:
+    container_name: terrafactora_db
     image: mysql:5.7
     volumes:
       - ./mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
@@ -9,6 +10,7 @@ services:
     ports:
       - "3306:3306"
     environment:
+      DB_HOST: container_name
       MYSQL_DATABASE: terrafactora
       MYSQL_ROOT_USER: root
       MYSQL_USER: terra_user

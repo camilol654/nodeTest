@@ -1,10 +1,11 @@
 
 import { BaseRoutres } from "../shared/routes/router";
 import { PriorityController } from "./controllers/priority.controller"
+import { PriorityMiddleware } from "./middlewares/priority.middleware";
 
-export class PriorityRouter extends BaseRoutres<PriorityController> {
+export class PriorityRouter extends BaseRoutres<PriorityController, PriorityMiddleware> {
     constructor() {
-        super(PriorityController);
+        super(PriorityController, PriorityMiddleware);
     }
 
     routes(): void {
@@ -12,7 +13,7 @@ export class PriorityRouter extends BaseRoutres<PriorityController> {
         this.router.get("/priority/:id", (req, res) =>
             this.controller.getPriorityById(req, res)
         );
-        this.router.post("/createPriority", (req, res) =>
+        this.router.post("/createPriority", (req, res, next) => [this.middelware.priorityValidator(req, res, next)], (req, res) =>
             this.controller.createPriority(req, res)
         );
         this.router.put("/updatePriority/:id", (req, res) =>

@@ -11,6 +11,5 @@ export class PriorityDTO extends BaseDTO {
     desc!: string;
 
 
-    @IsNotEmpty()
-    task!: TaskEntity[];
+    task?: TaskEntity[];
 }

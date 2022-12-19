@@ -11,6 +11,5 @@ export class StatusDTO extends BaseDTO {
     desc!: string;
 
 
-    @IsNotEmpty()
-    task!: StatusEntity[];
+    task?: StatusEntity[];
 }
