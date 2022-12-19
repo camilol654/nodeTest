@@ -13,17 +13,17 @@ export class TaskDTO extends BaseDTO {
     @IsNotEmpty()
     desc!: string;
 
-    @IsNotEmpty()
+
     beginDate!: Date;
 
-    @IsNotEmpty()
+
     endDate!: Date;
 
     taskFather!: string;
 
-    @IsNotEmpty()
+
     priority!: PriorityEntity;
 
-    @IsNotEmpty()
+
     status!: StatusEntity;
 }

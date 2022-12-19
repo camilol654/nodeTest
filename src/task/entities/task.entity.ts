@@ -13,10 +13,10 @@ export class TaskEntity extends BaseEntity {
     @Column()
     desc!: string;
 
-    @Column()
+    @Column({ nullable: true })
     beginDate!: Date;
 
-    @Column()
+    @Column({ nullable: true })
     endDate!: Date;
 
     @Column({ nullable: true })
