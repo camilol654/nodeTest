@@ -7,23 +7,13 @@ para la instalacion del proyecto nesesitaremos los siguientes programas
 
 comandos de instalacion
 
-los dos primeros instalan los paquetes nesesarios 
-- npm install -g ts-node
-- npm install
+primero creamos la imagen con el siguiente comando 
+- docker build --no-cache --progress=plain  -t api-node-ts . 
 
-los siguietentes comandos generaran la base de datos en docker 
-
-- npm run m:gen -- src/migrations/InitDB
-- npm run m:run
-
-El siguiente comnado es para ejecutar la base de datos de docker 
+El siguiente comnado es para ejecutar la base de datos de mysql y ejecucion del proyecto
 
 - docker-compose up
 
-
-para correr el servidor  usar el siguiente comando 
-
--npm run start:dev
 
 
 cons estos comando puedes probar en postman las siguientes urls que hacen referncia a los modulos 
