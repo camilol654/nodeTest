@@ -21,13 +21,13 @@ cons estos comando puedes probar en postman las siguientes urls que hacen refern
 Status
 
 
-    - get: http://localhost:3001/api/status
+    - get: http://localhost:8000/api/status
 
         
-    - get: http://localhost:3001/api/status/80d0b9df-abe5-4331-a99b-30e55e89108f
+    - get: http://localhost:8000/api/status/80d0b9df-abe5-4331-a99b-30e55e89108f
         get by id
 
-    - post:  http://localhost:3001/api/createStatus
+    - post:  http://localhost:8000/api/createStatus
      el body debe ser  en esta forma 
      {
         "name":"moderado",
@@ -35,23 +35,23 @@ Status
      }
      
      
-    - put:  http://localhost:3001/api/updateStatus/80d0b9df-abe5-4331-a99b-30e55e89108f
+    - put:  http://localhost:8000/api/updateStatus/80d0b9df-abe5-4331-a99b-30e55e89108f
      el body debe ser  en esta forma 
      {
         "name":"moderado",
         "desc": "moderado"
      }
 
-      - delete:  http://localhost:3001/api/deleteStatus/80d0b9df-abe5-4331-a99b-30e55e89108f
+      - delete:  http://localhost:8000/api/deleteStatus/80d0b9df-abe5-4331-a99b-30e55e89108f
 
 priority
 
-    - get: http://localhost:3001/api/priority
+    - get: http://localhost:8000/api/priority
 
-    - get http://localhost:3001/api/priority/80d0b9df-abe5-4331-a99b-30e55e89108f
+    - get http://localhost:8000/api/priority/80d0b9df-abe5-4331-a99b-30e55e89108f
         get by id
 
-    - post:  http://localhost:3001/api/createPriority
+    - post:  http://localhost:8000/api/createPriority
      el body debe ser  en esta forma 
      {
         "name":"moderado",
@@ -59,20 +59,20 @@ priority
      }
      
      
-    - put:  http://localhost:3001/api/updatePriority/80d0b9df-abe5-4331-a99b-30e55e89108f
+    - put:  http://localhost:8000/api/updatePriority/80d0b9df-abe5-4331-a99b-30e55e89108f
      el body debe ser  en esta forma 
      {
         "name":"moderado",
         "desc": "moderado"
      }
 
-      - delete: http://localhost:3001/api/deletePriority/80d0b9df-abe5-4331-a99b-30e55e89108f
+      - delete: http://localhost:8000/api/deletePriority/80d0b9df-abe5-4331-a99b-30e55e89108f
 
 task
 
-    - get: http://localhost:3001/api/task
+    - get: http://localhost:8000/api/task
 
-    - post:  http://localhost:3001/api/createTask
+    - post:  http://localhost:8000/api/createTask
      el body debe ser  en esta forma 
         {
         "name":"peuba task",
@@ -85,7 +85,7 @@ task
         }
         
      
-    - put:  http://localhost:3001/api/updateTask/80d0b9df-abe5-4331-a99b-30e55e89108f
+    - put:  http://localhost:8000/api/updateTask/80d0b9df-abe5-4331-a99b-30e55e89108f
      el body debe ser  en esta forma 
        {
         "name":"peuba task",
@@ -98,7 +98,7 @@ task
         }
 
 
-      - delete: http://localhost:3001/api/deleteTask/80d0b9df-abe5-4331-a99b-30e55e89108f
+      - delete: http://localhost:8000/api/deleteTask/80d0b9df-abe5-4331-a99b-30e55e89108f
 
     Modelo relacional
 
